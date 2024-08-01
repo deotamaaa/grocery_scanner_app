@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:grocery_scanner_app/features/Home/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -137,7 +138,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Center(
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return const HomeScreen();
+                                },
+                              ),
+                            );
+                          },
                           child: const Text('Guest Mode'),
                         ),
                       ),
